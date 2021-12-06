@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -104,6 +104,25 @@ namespace BowlingStatistics
 
             CalculateBtn.IsEnabled = false;
 
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            Game_1.Text = "";
+            Game_2.Text = "";
+            Game_3.Text = "";
+            Adverage.Text = "";
+            High.Text = "";
+            Handicap.Text = "";
+            Name.Text = "";
+            Gender.Text = "";
+            Board.Text = "";
+            EndGame_1.IsEnabled = true;
+            EndGame_2.IsEnabled = true;
+            EndGame_3.IsEnabled = true;
+            Name.IsEnabled = true;
+            Gender.IsEnabled = true;
+            CalculateBtn.IsEnabled = true;
         }
     }
 }
