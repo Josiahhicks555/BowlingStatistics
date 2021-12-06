@@ -1,0 +1,63 @@
+﻿<Window x:Class="BowlingStatistics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BowlingStatistics"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="Black">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width=".2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width=".2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width=".2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" Foreground="White" >Name:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Foreground="White">Gender:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" Foreground="White">Game 1 Total:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Foreground="White">Game 2 Total:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom" Foreground="White">Game 3 Total:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Foreground="White">Game Average:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" Foreground="White">Handicap used:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Foreground="White">High Game:</TextBlock>
+        <TextBlock x:Name="Title" Grid.Column="3" HorizontalAlignment="Center" Grid.ColumnSpan="3" VerticalAlignment='Center' Grid.Row="0" TextWrapping="NoWrap" Text="Bowling Statistics" FontWeight="Bold" FontSize="30" Foreground="White"/>
+
+        <TextBox x:Name="Name" Grid.Column="1" Grid.Row="1" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="11"/>
+        <TextBox x:Name="Gender" Grid.Column="1" Grid.Row="1" Width="100" Height="15" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="11"/>
+
+        <TextBlock x:Name="Game_1" Grid.Column="1" Grid.Row="2" Width="90" Height="15" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="11" Background="White"/>
+        <TextBlock x:Name="Game_2" Grid.Column="1" Grid.Row="2" Width="90" Height="15" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="11" Background="White"/>
+        <TextBlock x:Name="Game_3" Grid.Column="1" Grid.Row="2" Width="90" Height="15" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="11" Background="White"/>
+        <TextBlock x:Name="Board" Grid.Column="4" Grid.Row="1" Width="300" Height="150" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="30" Grid.ColumnSpan="3" Grid.RowSpan="3" Background="White"/>
+
+        <TextBlock x:Name="Adverage" Grid.Column="1" Grid.Row="3" Width="80" Height="15" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="11" Background="White"/>
+        <TextBlock x:Name="Handicap" Grid.Column="1" Grid.Row="3" Width="80" Height="15" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="11" Background="White"/>
+        <TextBlock x:Name="High" Grid.Column="1" Grid.Row="4" Width="90" Height="15" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="11" Background="White"/>
+
+        <Button x:Name="SubmitBtn" Content="Submit" Grid.Column="1" Grid.Row="5" Width="65" Height="20" HorizontalAlignment="left" VerticalAlignment="Top" Click="SubmitBtn_Click"/>
+        <Button x:Name="EndGame_1" Content="EndGame1" Grid.Column="1" Grid.Row="5" Width="65" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Click="EndGame_1_Click"/>
+        <Button x:Name="EndGame_2" Content="EndGame2" Grid.Column="3" Grid.Row="5" Width="65" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Click="EndGame_2_Click"/>
+        <Button x:Name="EndGame_3" Content="EndGame3" Grid.Column="3" Grid.Row="5" Width="65" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Click="EndGame_3_Click"/>
+        <Button x:Name="CalculateBtn" Content="Calculate" Grid.Column="5" Grid.Row="5" Width="65" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CalculateBtn_Click"/>
+        <Button x:Name="Roll" Content="Roll" Grid.Column="5" Grid.Row="5" Width="65" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Click="Roll_Click"/>
+
+    </Grid>
+</Window>
