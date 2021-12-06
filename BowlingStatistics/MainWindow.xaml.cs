@@ -24,6 +24,7 @@ namespace BowlingStatistics
         double game2;
         double game3;
         double borad1;
+        double TieGame;
         public MainWindow()
         {
             InitializeComponent();
@@ -92,7 +93,7 @@ namespace BowlingStatistics
 
             else
             {
-                MessageBox.Show("Tie");
+                High.Text = TieGame.ToString("Tie");
             }
 
             double answer = game1 + game2 + game3 / 3;
